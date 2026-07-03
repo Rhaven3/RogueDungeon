@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    <li routerLink="/encounter">Rogues & Dungeons</li>
+  </ul>
+  <ul>
+    <li routerLink="/creature">Creature</li>
+    <li routerLink="/encounter">Encounter</li>
+  </ul>
+  @if (authService.isLogged()) {
+    <ul>
+      <li [routerLink]="['/profile', username() ]">{{username()}}</li>
+      <li (click)="logout()">logout</li>
+    </ul>
+  } @else {
+    <ul>
+      <li [routerLink]="['/login']">Sign up</li>
+    </ul>
+  }
+</nav>

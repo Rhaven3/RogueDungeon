@@ -1,0 +1,15 @@
+
+<div class="container">
+  <form>
+    <label for="login">Login</label><input id="login" name="login" type="text" [(ngModel)]="username">
+    @if (checkLogin()) {
+      <div class="error">{{ checkLogin() }}</div>
+    }
+    <label for="password">Password</label><input id="password" name="password" type="password" [(ngModel)]="password">
+    @if (checkPassword()) {
+      <div class="error">{{ checkPassword() }}</div>
+    }
+
+    <button (click)="login()">Sign up</button>
+  </form>
+</div>

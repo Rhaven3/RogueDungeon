@@ -1,0 +1,13 @@
+<form [formGroup]="form" (submit)="submit()">
+  <label for="difficulty">Difficulty</label>
+  <select name="difficulty" id="difficulty" formControlName="difficulty">
+    @for (difficulty of difficultyOptions; track $index) {
+      <option [value]="difficulty.value">{{ difficulty.label }}</option>
+    }
+  </select>
+
+  <label for="partySize">Players</label><input type="number" id="partySize" name="partySize" formControlName="partySize">
+  <label for="partyAverageLvl">Lvl</label><input type="number" id="partyAverageLvl" name="partyAverageLvl" formControlName="partyAverageLvl">
+  <label for="numberCreatures">Creatures</label><input type="number" id="numberCreatures" name="numberCreatures" formControlName="numberCreatures">
+  <button type="submit">GENERATE</button>
+</form>

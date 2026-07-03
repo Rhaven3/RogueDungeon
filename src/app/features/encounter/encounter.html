@@ -1,0 +1,24 @@
+<div class="grid">
+  <div>
+    <app-encounter-form/>
+    <app-encounter-stats/>
+  </div>
+  <table>
+    <thead><tr>
+      <th scope="col">nb</th>
+      <th scope="col">Name</th>
+      <th scope="col">CR</th>
+      <th scope="col">Actions</th>
+    </tr></thead>
+    <tbody>
+      @for (creature of creatures; track $index) {
+        <th scope="row">{{creature.nb}}</th>
+        <td>{{ creature.name }}</td>
+        <td>{{ creature.cr }}</td>
+        <td>
+          <button>Ajouter</button>
+        </td>
+      }
+    </tbody>
+  </table>
+</div>
