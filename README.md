@@ -1,6 +1,10 @@
 # Rogues & Dungeons
 Une application pour aidé les MJs dans la gestion de leurs Campagnes.
 
+## Technos
+- Angular 20.3
+- Bootstrap 5.3
+
 ## Development server
 
 To start a local development server, run:
